@@ -11,20 +11,20 @@ namespace Nibble
 
             private void res()
             {
-                int i; for (i = 0; i <= 3; i++)
+                 for (int i = 0; i <= 3; i++)
                     bit[i] = 0;
             }
             private bool check()
             {
-                int i; for (i = 0; i <= 3; i++)
+                 for (int i = 0; i <= 3; i++)
                     if (bit[i] != 1 && bit[i] != 0)
                         return false;
                 return true;
             }
             private int nibtoint()
             {
-                int i, erg = 0, p = 8;
-                for (i = 0; i <= 3; i++)
+                erg = 0, p = 8;
+                for (int i = 0; i <= 3; i++)
                 {
                     erg = erg + bit[i] * p; p /= 2;
                 }
@@ -49,11 +49,11 @@ namespace Nibble
             }
             public nibbles(int a)
             {
-                int i, p = 8;
+                int  p = 8;
                 res();
                 if (a <= 15 && a >= 0)
                 {
-                    for (i = 0; i <= 3; i++)
+                    for (int i = 0; i <= 3; i++)
                     {
                         if (a >= p)
                         { bit[i] = 1; a = a - p; }
